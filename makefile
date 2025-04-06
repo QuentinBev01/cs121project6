@@ -1,16 +1,29 @@
-main.cpp: date.h adress.h student.h student.cpp main.cpp
-	g++ -g -c date.cpp
+main: address.o date.o student.o main.o
+	g++ -g address.o student.o main.o -o main
+
+main.o: address.h date.h student.h main.cpp
+	g++ -c -g main.cpp
+
+student.o: student.h student.cpp
+	g++ -c -g date.cpp
+
+date.o: date.h date.cpp
+	g++ -c -g date.cpp
+
+address.o: address.h address.cpp
+	g++ -c -g address.cpp 
+
+clean: 
+	rm *.o 
+
+run: main
+	./main
+
+debug: main
+	gdb main
+
+valgrind: main 
+	valgrind ./main
 
 
-address.h: address.h adress.cpp
-	g++ -g -c address.cpp
 
-
-date.h: date.h date.cpp
-	g++ -g -c date.cpp
-
-student.h: date.h address.h student.h student.cpp
-	g+ -g -c student.cpp
-
-run: heapstudents
-	./heapstudents 

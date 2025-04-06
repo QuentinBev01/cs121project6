@@ -1,23 +1,22 @@
-include "<iostreams>"
-include "address.h"
+//address.h
 
-class address::Address(){
-	street = "";
-	city = "";
-	state = "";
-	zip "";
-} // end constructor
+#ifndef ADRESS_H_EXISTS
+#define ADDRESS_H_EXISTS
 
-void Address::init(std::string street, std::string city,std:: string state, std::string zip)
-	Address::street = street;
-	Adress:: city = city;
-	Address:: state= state;
-	Address:: zip = zip;
-	} //end  init
+#include <string>
 
-void Address:: printAddress(){
-	std::cout << street <<std::end1;
-	std::cout << city << " " << state << ", ";
-	std::cout << zip << std::end1;
-} // end printAddress
+class Address{
+	proctected:
+		std::string street;
+		std::string city;
+		std::string state;
+		std::string zip;
+	public:
+		Address();
+		void init(std::string street, std::string city,std:: string state, std::string zip)
+		void printAdress();
+
+}; // end class def 
+
+#endif
 
