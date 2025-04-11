@@ -13,7 +13,7 @@ class Address{
 		std::string zip;
 	public:
 		Address();
-		void init(std::string street, std::string city,std:: string state, std::string zip)
+		void init(std::string street, std::string city, std::string state, std::string zip);
 		void printAdress();
 
 }; // end class def 

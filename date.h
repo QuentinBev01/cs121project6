@@ -1,26 +1,21 @@
 //date.h
 
-#include "date.h"
-#include <iostream> 
-#include <sstream>
 
-Date::Date(){
-	dateString = "0/00/0000"
-	month = 0;
-	day = 0;
-	year = 0;
-} //end constructor 
+#ifndef DATE_H_EXISTS
+#ifndef DATE_H_EXISTS
 
-void Date::init(std::string dateString){
-	Date::dataString; 
-	Date::month; 
-	Date::day;
-	Date::year;
+#include <string>
 
-public:
-	date();
-	void init(std::string datestring);
-	void printDate();
-}; // end class def 
+class Date {
+	protected:
+		std::string dateString;
+		int month;
+		int day;
+		int year;
+	public:
+		Date();
+		void init(std::string dateString);
+		void printDate();
+}; end class def
 
-
+#endif 

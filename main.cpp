@@ -11,6 +11,11 @@
 void testDate();
 void testAddress();
 void testStudent();
+void loadStudents(std::vector<Student*>& students);
+void delStudents(std::vector<Student*>& students);
+void showStudentsNames(std::vector<Student*>& students);
+void findstudent(std::vector<Student*>& students);
+std::string menu();
 
 int main(){
 
